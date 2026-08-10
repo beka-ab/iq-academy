@@ -8,24 +8,52 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        brand: {
-          50: "#eef4ff",
-          100: "#d9e6ff",
-          200: "#b7cfff",
-          300: "#8aadff",
-          400: "#5c85ff",
-          500: "#3660fa",
-          600: "#2445e0",
-          700: "#1d37b3",
-          800: "#1c318f",
-          900: "#1c2e70",
+        // Ink navy — lifted from the logo's shield and wordmark
+        ink: {
+          50: "#eef1f7",
+          100: "#dbe2ee",
+          200: "#aebcd6",
+          300: "#7d92ba",
+          400: "#4c6494",
+          500: "#2c4370",
+          600: "#1c2e55",
+          700: "#152341",
+          800: "#101b33",
+          900: "#0a1224",
         },
-        accent: {
-          500: "#f7b733",
+        // Warm paper background — matches the logo's canvas
+        paper: {
+          DEFAULT: "#F7F3EA",
+          dim: "#EFE8D8",
+        },
+        // Flame gradient stops, lifted from the logo's torch
+        flame: {
+          purple: "#6B3FA0",
+          violet: "#9B4FC4",
+          orange: "#F0812E",
+          amber: "#F4A93B",
+        },
+        // Kept for backward compatibility with existing components
+        brand: {
+          50: "#eef1f7",
+          100: "#dbe2ee",
+          200: "#aebcd6",
+          300: "#7d92ba",
+          400: "#4c6494",
+          500: "#2c4370",
+          600: "#1c2e55",
+          700: "#152341",
+          800: "#101b33",
+          900: "#0a1224",
         },
       },
       fontFamily: {
+        display: ["var(--font-display)", "serif"],
         sans: ["var(--font-sans)", "BPG Nino Mtavruli", "sans-serif"],
+      },
+      backgroundImage: {
+        "flame-gradient":
+          "linear-gradient(135deg, #6B3FA0 0%, #9B4FC4 35%, #F0812E 75%, #F4A93B 100%)",
       },
     },
   },

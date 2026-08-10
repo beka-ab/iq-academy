@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { useSession, signOut } from "next-auth/react";
 import { useState } from "react";
 
@@ -10,28 +11,37 @@ export default function Navbar() {
   const role = (session?.user as any)?.role;
 
   return (
-    <header className="sticky top-0 z-50 bg-white/90 backdrop-blur border-b border-slate-100">
-      <div className="mx-auto max-w-6xl px-4 flex items-center justify-between h-16">
-        <Link href="/" className="flex items-center gap-2 font-extrabold text-brand-700 text-lg">
-          <span className="w-9 h-9 rounded-xl bg-brand-600 text-white grid place-items-center">IQ</span>
-          IQ აკადემია
+    <header className="sticky top-0 z-50 bg-paper/95 backdrop-blur border-b border-ink-100">
+      <div className="mx-auto max-w-6xl px-4 flex items-center justify-between h-20">
+        <Link href="/" className="flex items-center gap-3 group">
+          <Image
+            src="/logo-icon.png"
+            alt="IQ აკადემია"
+            width={44}
+            height={44}
+            className="h-11 w-11 object-contain transition-transform group-hover:scale-105"
+            priority
+          />
+          <span className="font-display font-semibold text-ink-800 text-xl tracking-tight">
+            IQ აკადემია
+          </span>
         </Link>
 
-        <nav className="hidden md:flex items-center gap-7 text-sm font-medium text-slate-600">
-          <Link href="/services" className="hover:text-brand-700">სერვისები</Link>
-          <Link href="/about" className="hover:text-brand-700">ჩვენ შესახებ</Link>
-          <Link href="/contact" className="hover:text-brand-700">კონტაქტი</Link>
+        <nav className="hidden md:flex items-center gap-8 text-sm font-medium text-ink-500">
+          <Link href="/services" className="hover:text-ink-800 transition-colors">სერვისები</Link>
+          <Link href="/about" className="hover:text-ink-800 transition-colors">ჩვენ შესახებ</Link>
+          <Link href="/contact" className="hover:text-ink-800 transition-colors">კონტაქტი</Link>
         </nav>
 
         <div className="hidden md:flex items-center gap-3">
           {!session && (
             <>
-              <Link href="/login" className="text-sm font-medium text-slate-600 hover:text-brand-700">
+              <Link href="/login" className="text-sm font-medium text-ink-500 hover:text-ink-800 transition-colors">
                 შესვლა
               </Link>
               <Link
                 href="/register"
-                className="text-sm font-semibold bg-brand-600 text-white px-4 py-2 rounded-lg hover:bg-brand-700 transition"
+                className="text-sm font-semibold text-white px-5 py-2.5 rounded-lg bg-ink-800 hover:bg-ink-700 transition-colors"
               >
                 მშობლის რეგისტრაცია
               </Link>
@@ -41,13 +51,13 @@ export default function Navbar() {
             <>
               <Link
                 href={role === "ADMIN" ? "/admin" : "/dashboard"}
-                className="text-sm font-medium text-slate-600 hover:text-brand-700"
+                className="text-sm font-medium text-ink-500 hover:text-ink-800 transition-colors"
               >
                 {role === "ADMIN" ? "ადმინის პანელი" : "ჩემი კაბინეტი"}
               </Link>
               <button
                 onClick={() => signOut({ callbackUrl: "/" })}
-                className="text-sm font-semibold border border-slate-200 px-4 py-2 rounded-lg hover:bg-slate-50 transition"
+                className="text-sm font-semibold border border-ink-200 text-ink-700 px-5 py-2.5 rounded-lg hover:bg-ink-50 transition-colors"
               >
                 გასვლა
               </button>
@@ -56,14 +66,14 @@ export default function Navbar() {
         </div>
 
         <button className="md:hidden p-2" onClick={() => setOpen(!open)} aria-label="მენიუ">
-          <span className="block w-6 h-0.5 bg-slate-800 mb-1.5" />
-          <span className="block w-6 h-0.5 bg-slate-800 mb-1.5" />
-          <span className="block w-6 h-0.5 bg-slate-800" />
+          <span className="block w-6 h-0.5 bg-ink-800 mb-1.5" />
+          <span className="block w-6 h-0.5 bg-ink-800 mb-1.5" />
+          <span className="block w-6 h-0.5 bg-ink-800" />
         </button>
       </div>
 
       {open && (
-        <div className="md:hidden border-t border-slate-100 px-4 py-4 flex flex-col gap-3 text-sm font-medium text-slate-600">
+        <div className="md:hidden border-t border-ink-100 px-4 py-4 flex flex-col gap-3 text-sm font-medium text-ink-600">
           <Link href="/services" onClick={() => setOpen(false)}>სერვისები</Link>
           <Link href="/about" onClick={() => setOpen(false)}>ჩვენ შესახებ</Link>
           <Link href="/contact" onClick={() => setOpen(false)}>კონტაქტი</Link>

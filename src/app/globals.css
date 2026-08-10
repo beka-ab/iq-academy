@@ -3,6 +3,7 @@
 @tailwind utilities;
 
 :root {
+  --font-display: "Noto Serif Georgian", "BPG Nino Mtavruli", serif;
   --font-sans: "Noto Sans Georgian", "BPG Nino Mtavruli", ui-sans-serif, system-ui;
 }
 
@@ -12,4 +13,14 @@ html {
 
 body {
   font-family: var(--font-sans);
+}
+
+h1, h2, h3, .font-display {
+  font-family: var(--font-display);
+}
+
+/* Subtle paper texture — a faint grain so the warm background doesn't read as a flat fill */
+.paper-texture {
+  background-image: radial-gradient(circle at 1px 1px, rgba(16, 27, 51, 0.035) 1px, transparent 0);
+  background-size: 22px 22px;
 }
