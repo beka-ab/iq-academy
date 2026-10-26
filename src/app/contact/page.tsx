@@ -10,11 +10,23 @@ export default function ContactPage() {
         <div className="space-y-6">
           <div>
             <h3 className="font-semibold text-slate-900">მისამართი</h3>
-            <p className="text-slate-500 mt-1">თბილისი, საქართველო</p>
+            <p className="text-slate-500 mt-1">
+              ბათუმი, გორგილაძის 91 (გორკის შაურმის შენობა)
+            </p>
+            <a
+              href="https://www.google.com/maps/search/?api=1&query=Gorgiladze+91+Batumi"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-sm text-brand-600 font-medium mt-1 inline-block"
+            >
+              რუკაზე ნახვა
+            </a>
           </div>
           <div>
             <h3 className="font-semibold text-slate-900">ტელეფონი</h3>
-            <p className="text-slate-500 mt-1">+995 5xx xx xx xx</p>
+            <p className="text-slate-500 mt-1">
+              <a href="tel:+995599576533">+995 599 576 533</a>
+            </p>
           </div>
           <div>
             <h3 className="font-semibold text-slate-900">ემაილი</h3>
@@ -41,7 +53,9 @@ export default function ContactPage() {
             />
           </div>
           <div>
-            <label className="text-sm font-medium text-slate-700">ტელეფონი ან ემაილი</label>
+            <label className="text-sm font-medium text-slate-700">
+              ტელეფონი ან ემაილი
+            </label>
             <input
               required
               name="კონტაქტი"
@@ -49,7 +63,9 @@ export default function ContactPage() {
             />
           </div>
           <div>
-            <label className="text-sm font-medium text-slate-700">შეტყობინება</label>
+            <label className="text-sm font-medium text-slate-700">
+              შეტყობინება
+            </label>
             <textarea
               required
               name="შეტყობინება"
@@ -64,8 +80,9 @@ export default function ContactPage() {
             გაგზავნა
           </button>
           <p className="text-xs text-slate-400">
-            შენიშვნა: სასურველია მომავალში ეს ფორმა დაუკავშირდეს რეალურ სერვერულ ენდპოინტს
-            (მაგ. ემაილის გაგზავნის სერვისს), რომ პირდაპირ ბაზაში ან CRM-ში მოხვდეს.
+            შენიშვნა: სასურველია მომავალში ეს ფორმა დაუკავშირდეს რეალურ სერვერულ
+            ენდპოინტს (მაგ. ემაილის გაგზავნის სერვისს), რომ პირდაპირ ბაზაში ან
+            CRM-ში მოხვდეს.
           </p>
         </form>
       </div>

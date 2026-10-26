@@ -15,26 +15,63 @@ export default function Footer() {
                 className="object-contain"
               />
             </span>
-            <span className="font-display font-semibold text-white text-lg">IQ აკადემია</span>
+            <span className="font-display font-semibold text-white text-lg">
+              IQ აკადემია
+            </span>
           </div>
           <p className="text-sm text-ink-300 max-w-xs leading-relaxed">
-            მოსამზადებელი ცენტრი 1-დან 6 კლასამდე მოსწავლეებისთვის — ვზრდით ცოდნას, თავდაჯერებულობასა და შედეგებს.
+            მოსამზადებელი ცენტრი 1-დან 6 კლასამდე მოსწავლეებისთვის — ვზრდით
+            ცოდნას, თავდაჯერებულობასა და შედეგებს.
           </p>
         </div>
         <div>
-          <h4 className="text-white font-semibold mb-4 text-sm tracking-wide">ნავიგაცია</h4>
+          <h4 className="text-white font-semibold mb-4 text-sm tracking-wide">
+            ნავიგაცია
+          </h4>
           <ul className="space-y-2.5 text-sm text-ink-300">
-            <li><a href="/services" className="hover:text-white transition-colors">სერვისები</a></li>
-            <li><a href="/about" className="hover:text-white transition-colors">ჩვენ შესახებ</a></li>
-            <li><a href="/contact" className="hover:text-white transition-colors">კონტაქტი</a></li>
-            <li><a href="/register" className="hover:text-white transition-colors">მშობლის რეგისტრაცია</a></li>
+            <li>
+              <a
+                href="/services"
+                className="hover:text-white transition-colors"
+              >
+                სერვისები
+              </a>
+            </li>
+            <li>
+              <a href="/about" className="hover:text-white transition-colors">
+                ჩვენ შესახებ
+              </a>
+            </li>
+            <li>
+              <a href="/contact" className="hover:text-white transition-colors">
+                კონტაქტი
+              </a>
+            </li>
+            <li>
+              <a
+                href="/register"
+                className="hover:text-white transition-colors"
+              >
+                მშობლის რეგისტრაცია
+              </a>
+            </li>
           </ul>
         </div>
         <div>
-          <h4 className="text-white font-semibold mb-4 text-sm tracking-wide">კონტაქტი</h4>
+          <h4 className="text-white font-semibold mb-4 text-sm tracking-wide">
+            კონტაქტი
+          </h4>
           <ul className="space-y-2.5 text-sm text-ink-300">
-            <li>თბილისი, საქართველო</li>
-            <li>+995 5xx xx xx xx</li>
+            <li>ბათუმი, გორგილაძის 91</li>
+            <li className="text-ink-400">(გორკის შაურმის შენობა)</li>
+            <li>
+              <a
+                href="tel:+995599576533"
+                className="hover:text-white transition-colors"
+              >
+                +995 599 576 533
+              </a>
+            </li>
             <li>info@iqacademy.ge</li>
           </ul>
         </div>
