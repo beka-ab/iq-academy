@@ -3,6 +3,7 @@ import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import Providers from "@/components/Providers";
+import ContactButtons from "@/components/ContactButtons";
 
 export const metadata: Metadata = {
   title: "IQ აკადემია — მოსამზადებელი ცენტრი",
@@ -22,7 +23,11 @@ export default function RootLayout({
     <html lang="ka">
       <head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        <link
+          rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossOrigin="anonymous"
+        />
         <link
           href="https://fonts.googleapis.com/css2?family=Noto+Serif+Georgian:wght@500;600;700&family=Noto+Sans+Georgian:wght@400;500;600;700&display=swap"
           rel="stylesheet"
@@ -33,6 +38,7 @@ export default function RootLayout({
           <Navbar />
           <main className="flex-1">{children}</main>
           <Footer />
+          <ContactButtons />
         </Providers>
       </body>
     </html>
